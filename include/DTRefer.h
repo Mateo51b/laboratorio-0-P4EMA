@@ -1,4 +1,7 @@
-#include "../src/DTFecha.cpp"
+#ifndef DTREFER
+#define DTREFER
+
+#include "../src/DTFecha.h"
 #include <set>
 #include <string> 
 using namespace std;
@@ -24,3 +27,4 @@ class DTRefer {
         // Destructor
         ~DTRefer();
 };
+#endif

@@ -1,3 +1,5 @@
+#ifndef ArticuloRevista
+#define Articulo Revista
 #include "string"
 #include "Publicacion.h"
 using namespace std;
@@ -11,3 +13,4 @@ class ArticuloRevista : public Publicacion {
     bool contienePalabra(string);
 };
 
+#endif

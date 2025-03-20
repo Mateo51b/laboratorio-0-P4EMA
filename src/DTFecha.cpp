@@ -1,5 +1,3 @@
-#ifndef Fecha
-#define Fecha
 #include "../include/DTFecha.h"
 #include <string>
 #include <sstream>
@@ -70,5 +68,3 @@ std::string DTFecha::toString() const{
 
 // Destructor
 DTFecha::~DTFecha() {}
-
-#endif //Fecha

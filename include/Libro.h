@@ -1,3 +1,5 @@
+#ifndef Libro
+#define Libro
 #include "string"
 #include "Publicacion.h"
 #include <set>
@@ -11,3 +13,4 @@ class Libro : public Publicacion {
     public:
     bool contienePalabra(string);
 };
+#endif

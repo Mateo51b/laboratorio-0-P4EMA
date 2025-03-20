@@ -1,9 +1,12 @@
+#ifndef Publicacion
+#define Publicacion
 #include <string>
-#include "../include/DTFecha.h"
-using namespace std;
-#include "../include/DTRefer.h"
+#include "DTFecha.h"
+#include "DTRefer.h"
 #include <map>
-#include "investigador.h"
+#include "Investigador.h"
+
+using namespace std;
 
 class Publicacion {
     private:
@@ -25,6 +28,4 @@ class Publicacion {
         virtual ~Publicacion();
         
 };
-
-
-
+#endif

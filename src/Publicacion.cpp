@@ -1,6 +1,4 @@
 #include "../include/Publicacion.h"
-#include "../include/DTRefer.h"
-#include "../include/DTFecha.h"
 
 
 Publicacion::Publicacion(): fecha(), titulo(""),DOI("") {

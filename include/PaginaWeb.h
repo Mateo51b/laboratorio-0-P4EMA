@@ -1,3 +1,6 @@
+#ifndef PAGINAWEB
+#define PAGINAWEB
+
 #include "string"
 #include "Publicacion.h"
 using namespace std;
@@ -9,4 +12,4 @@ class PaginaWeb : public Publicacion {
     public:
     bool contienePalabra(string);
 };
-
+#endif

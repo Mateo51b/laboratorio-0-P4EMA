@@ -1,7 +1,5 @@
 #include "../include/Investigador.h"
 
-
-
 Investigador :: Investigador(string ORCID, string nombre, string institucion, vector<Publicacion*> publicaciones)
     : ORCID(ORCID), nombre(nombre), institucion(institucion), publicaciones(publicaciones) {};
 

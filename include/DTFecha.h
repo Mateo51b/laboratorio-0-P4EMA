@@ -1,3 +1,5 @@
+#ifndef Fecha
+#define Fecha
 #include <string>
 using namespace std;
 class DTFecha {
@@ -24,3 +26,4 @@ class DTFecha {
         // Destructor
         ~DTFecha();
 };
+#endif
