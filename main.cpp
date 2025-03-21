@@ -1,11 +1,11 @@
 #include <iostream>
 #include "src/DTRefer.cpp"
-#include "../src/DTFecha.cpp"
-#include "../src/Publicacion.cpp"
-#include "../src/PaginaWeb.cpp"
-#include "../src/Libro.cpp"
-#include "../src/Investigador.cpp"
-#include "../src/ArticuloRevista.cpp"
+#include "/src/DTFecha.cpp"
+#include "/src/Publicacion.cpp"
+#include "/src/PaginaWeb.cpp"
+#include "/src/Libro.cpp"
+#include "/src/Investigador.cpp"
+#include "/src/ArticuloRevista.cpp"
 
 
 
