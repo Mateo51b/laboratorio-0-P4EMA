@@ -2,7 +2,7 @@ Nombre del compilador
 CXX = g++
 
 Flags de compilación
-CXXFLAGS = -std=c++11 -Wall -g
+CXXFLAGS = -std=c++98
 
 Directorios de los archivos
 INCLUDE_DIR = include
