@@ -26,7 +26,6 @@ Investigador.o: src/Investigador.cpp include/Investigador.h
 
 ArticuloRevista.o: src/ArticuloRevista.cpp include/ArticuloRevista.h
 	g++ -std=c++98 -c src/ArticuloRevista.cpp
-
-# Limpiar archivos compilados
+	# Limpiar archivos compilados
 clean:
 	rm -f *.o output
