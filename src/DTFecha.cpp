@@ -24,14 +24,14 @@ int DTFecha::getAnio() {
 }
 
 //Operaciones
-bool operatorMayor(DTFecha& fecha1, DTFecha& fecha2) {
-    if (fecha1.getAnio() > fecha2.getAnio()) {
+bool operatorMayor(DTFecha* fecha1, DTFecha* fecha2) {
+    if (fecha1->getAnio() > fecha2->getAnio()) {
         return true;
-    } else if (fecha1.getAnio() == fecha2.getAnio()) {
-        if (fecha1.getMes() > fecha2.getMes()) {
+    } else if (fecha1->getAnio() == fecha2->getAnio()) {
+        if (fecha1->getMes() > fecha2->getMes()) {
             return true;
-        } else if (fecha1.getMes() == fecha2.getMes()) {
-            if (fecha1.getDia() >= fecha2.getDia()) {
+        } else if (fecha1->getMes() == fecha2->getMes()) {
+            if (fecha1->getDia() >= fecha2->getDia()) {
                 return true;
             }
         }
@@ -39,23 +39,23 @@ bool operatorMayor(DTFecha& fecha1, DTFecha& fecha2) {
     return false;
 }
 
-bool operator<(DTFecha& fecha1, DTFecha& fecha2) {
-    if (fecha1.getAnio() < fecha2.getAnio()) {
+bool operatorMenor(DTFecha* fecha1, DTFecha* fecha2) {
+    if (fecha1->getAnio() < fecha2->getAnio()) {
         return true;
-    } else if (fecha1.getAnio() == fecha2.getAnio()) {
-        if (fecha1.getMes() < fecha2.getMes()) {
+    } else if (fecha1->getAnio() == fecha2->getAnio()) {
+        if (fecha1->getMes() < fecha2->getMes()) {
             return true;
-        } else if (fecha1.getMes() == fecha2.getMes()) {
-            if (fecha1.getDia() < fecha2.getDia()) {
+        } else if (fecha1->getMes() == fecha2->getMes()) {
+            if (fecha1->getDia() <= fecha2->getDia()) {
                 return true;
             }
         }
     }
     return false;
-}
-
+} 
+/*
 //Funciones
-/*string DTFecha:: toString(){
+string DTFecha:: toString(){
     //return dia + "/" + mes + "/" + anio;
     return dia + "/" + mes + "/" + anio;
 }*/

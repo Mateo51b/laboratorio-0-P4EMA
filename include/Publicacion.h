@@ -1,5 +1,5 @@
-#ifndef Publicacion
-#define Publicacion
+#ifndef PUBLICACION_H
+#define PUBLICACION_H
 #include <string>
 #include "DTFecha.h"
 #include "DTRefer.h"
@@ -12,7 +12,7 @@ class Publicacion {
     private:
         string DOI;
         string titulo;
-        DTFecha fecha;
+        DTFecha* fecha;
         set<string> autores;
         
 
@@ -21,8 +21,8 @@ class Publicacion {
 
 
         // Metodos
-        DTRefer getDT();
-        DTFecha getFecha();
+        DTRefer* getDT();
+        DTFecha* getFecha();
         string getDoi();
         virtual bool contienePalabra(string palabra ) = 0; // Abstracto
         virtual ~Publicacion();

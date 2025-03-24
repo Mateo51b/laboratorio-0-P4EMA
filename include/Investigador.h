@@ -5,12 +5,9 @@
 #include <set>
 #include <map>
 #include <vector>
-#include "Publicacion.h"
 #include "DTFecha.h"
 using namespace std;
-
-#include "../include/DTFecha.h"
-#include "Publicacion.h"
+class Publicacion;
 
 class Investigador{
 private:

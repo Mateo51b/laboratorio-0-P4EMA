@@ -1,40 +1,32 @@
-Nombre del compilador
-CXX = g++
+# Nombre del ejecutable
+output: main.o DTFecha.o DTRefer.o Publicacion.o PaginaWeb.o Libro.o Investigador.o ArticuloRevista.o
+	g++ -std=c++98 main.o DTFecha.o DTRefer.o Publicacion.o PaginaWeb.o Libro.o Investigador.o ArticuloRevista.o -o output
 
-Flags de compilación
-CXXFLAGS = -std=c++11 -Wall -g
+# Compilar cada archivo fuente
+main.o: main.cpp include/*.h
+	g++ -std=c++98 -c main.cpp
 
-Directorios de los archivos
-INCLUDE_DIR = include
-SRC_DIR = src
+DTFecha.o: src/DTFecha.cpp include/DTFecha.h
+	g++ -std=c++98 -c src/DTFecha.cpp
 
-Archivos fuente
-SRC = $(SRC_DIR)/Publicacion.cpp \
-      $(SRC_DIR)/ArticuloRevista.cpp \
-      $(SRC_DIR)/Libro.cpp \
-      $(SRC_DIR)/PaginaWeb.cpp \
-      $(SRC_DIR)/Investigador.cpp \
-      $(SRC_DIR)/DTFecha.cpp \
-      $(SRC_DIR)/DTRefer.cpp \
-      main.cpp
+DTRefer.o: src/DTRefer.cpp include/DTRefer.h
+	g++ -std=c++98 -c src/DTRefer.cpp
 
-Archivos objeto (reemplaza .cpp por .o)
-OBJ = $(SRC:.cpp=.o)
+Publicacion.o: src/Publicacion.cpp include/Publicacion.h
+	g++ -std=c++98 -c src/Publicacion.cpp
 
-Nombre del ejecutable
-TARGET = programa
+PaginaWeb.o: src/PaginaWeb.cpp include/PaginaWeb.h
+	g++ -std=c++98 -c src/PaginaWeb.cpp
 
-Regla principal para compilar el ejecutable
-all: $(TARGET)
+Libro.o: src/Libro.cpp include/Libro.h
+	g++ -std=c++98 -c src/Libro.cpp
 
-Regla para compilar el ejecutable a partir de los archivos objeto
-$(TARGET): $(OBJ)
-    $(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJ)
+Investigador.o: src/Investigador.cpp include/Investigador.h
+	g++ -std=c++98 -c src/Investigador.cpp
 
-Regla para compilar cada archivo .cpp a .o
-%.o: %.cpp
-    $(CXX) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_DIR)
+ArticuloRevista.o: src/ArticuloRevista.cpp include/ArticuloRevista.h
+	g++ -std=c++98 -c src/ArticuloRevista.cpp
 
-Limpieza de archivos compilados
+# Limpiar archivos compilados
 clean:
-    rm -f $(SRC_DIR)/*.o $(TARGET)
+	rm -f *.o output

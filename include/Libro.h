@@ -1,5 +1,5 @@
-#ifndef Libro
-#define Libro
+#ifndef LIBRO_H
+#define LIBRO_H
 #include "string"
 #include "Publicacion.h"
 #include <set>

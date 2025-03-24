@@ -1,7 +1,7 @@
 #ifndef DTREFER
 #define DTREFER
 
-#include "../src/DTFecha.h"
+#include "DTFecha.h"
 #include <set>
 #include <string> 
 using namespace std;
