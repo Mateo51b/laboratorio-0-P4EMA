@@ -17,8 +17,8 @@ class DTFecha {
         int getAnio();
 
         // Operaciones
-        bool operatorMayor(DTFecha* fecha1, DTFecha* fecha2);
-        bool operatorMenor(DTFecha* fecha1, DTFecha* fecha2);
+        bool operator>=(const DTFecha&);
+        bool operator<=(const DTFecha&);
 
         //funciones
         string toString() const;
