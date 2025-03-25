@@ -24,41 +24,34 @@ int DTFecha::getAnio() {
 }
 
 //Operaciones
-bool operatorMayor(DTFecha* fecha1, DTFecha* fecha2) {
-    if (fecha1->getAnio() > fecha2->getAnio()) {
+bool DTFecha::operator>=(const DTFecha& fecha){
+    if (this->anio > fecha.dia) {
         return true;
-    } else if (fecha1->getAnio() == fecha2->getAnio()) {
-        if (fecha1->getMes() > fecha2->getMes()) {
+    } else if (this->anio == fecha.anio) {
+        if (this->mes > fecha.mes) {
             return true;
-        } else if (fecha1->getMes() == fecha2->getMes()) {
-            if (fecha1->getDia() >= fecha2->getDia()) {
+        } else if (this->mes == fecha.mes) {
+            if (this->dia >= fecha.dia) {
                 return true;
             }
         }
     }
     return false;
 }
-
-bool operatorMenor(DTFecha* fecha1, DTFecha* fecha2) {
-    if (fecha1->getAnio() < fecha2->getAnio()) {
+bool DTFecha::operator<=(const DTFecha& fecha){
+    if (this->anio < fecha.dia) {
         return true;
-    } else if (fecha1->getAnio() == fecha2->getAnio()) {
-        if (fecha1->getMes() < fecha2->getMes()) {
+    } else if (this->anio == fecha.anio) {
+        if (this->mes < fecha.mes) {
             return true;
-        } else if (fecha1->getMes() == fecha2->getMes()) {
-            if (fecha1->getDia() <= fecha2->getDia()) {
+        } else if (this->mes == fecha.mes) {
+            if (this->dia <= fecha.dia) {
                 return true;
             }
         }
     }
     return false;
-} 
-/*
-//Funciones
-string DTFecha:: toString(){
-    //return dia + "/" + mes + "/" + anio;
-    return dia + "/" + mes + "/" + anio;
-}*/
+}
 
 std::string DTFecha::toString() const{
     std::ostringstream oss;

@@ -15,7 +15,7 @@ set<string> Investigador :: listarPublicaciones(DTFecha desde, string palabra){
     DTFecha* aux2 = new DTFecha(desde.getDia(),desde.getMes(),desde.getAnio());
     for(vector<Publicacion*> :: iterator it = publicaciones.begin(); it != publicaciones.end(); it++){
         DTFecha* fechaAux = (*it)->getFecha();
-        if (operatorMayor(fechaAux,aux2)){
+        if (fechaAux>=aux2){
             if ((*it)->contienePalabra(palabra)) {
                 aux.insert(((*it)->getDoi()));
             }
