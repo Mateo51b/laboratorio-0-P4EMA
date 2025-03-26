@@ -11,6 +11,7 @@ class ArticuloRevista : public Publicacion {
         string revista;
         string extracto;
     public:
+        ArticuloRevista(string DOI, string titulo, DTFecha* fecha, string revista, string extracto);
         bool contienePalabra(string);
 };
 

@@ -11,6 +11,7 @@ class Libro : public Publicacion {
     set<string> PalabrasDestacadas;
 
     public:
+    Libro(string DOI,string titulo,DTFecha* fecha, string editorial, set<string> PalabrasDestacadas);
     bool contienePalabra(string);
 };
 #endif

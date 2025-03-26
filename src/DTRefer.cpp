@@ -39,17 +39,19 @@ bool operator==(const DTRefer &refer1, const DTRefer &refer2)
 ostream& operator<<(ostream &os, const DTRefer &refer)
 {
     os << refer.DOI << "->" << refer.titulo << "(" << refer.fecha->toString() << ")/";
-    
-    set<string>::iterator it = refer.autores.begin();
-    set<string>::iterator last = refer.autores.end();
-    --last;
-    while (it != refer.autores.end()) {
-        os << *it;
-        if (it != last) {
-            os << ",";
+    if(!refer.autores.empty()){
+        set<string>::iterator it = refer.autores.begin();
+        set<string>::iterator last = refer.autores.end();
+        --last;
+        while (it != refer.autores.end()) {
+            os << *it;
+            if (it != last) {
+                os << ",";
+            }
+            ++it;
         }
-        ++it;
     }
+    os <<endl;
     return os;
 }
 

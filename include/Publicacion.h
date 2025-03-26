@@ -13,17 +13,18 @@ class Publicacion {
         string DOI;
         string titulo;
         DTFecha* fecha;
-        set<string> autores;
         
-
+        vector<Investigador*> autores;
     public:
-        Publicacion();
+        Publicacion(string DOI, string titulo, DTFecha* fecha);
 
 
         // Metodos
         DTRefer* getDT();
         DTFecha* getFecha();
+        vector<Investigador*> getAutores();
         string getDoi();
+        void AgregarAutor(Investigador* i);
         virtual bool contienePalabra(string palabra ) = 0; // Abstracto
         virtual ~Publicacion();
         

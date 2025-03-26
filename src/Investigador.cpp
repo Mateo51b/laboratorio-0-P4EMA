@@ -6,8 +6,16 @@ Investigador :: Investigador(string ORCID, string nombre, string institucion, ve
 
 
 string Investigador :: toString(){
-    return ORCID + "->" + nombre + "/" + institucion ;  
+    return ORCID + " -> " + nombre + " / " + institucion ;  
 
+}
+string Investigador:: getNombre(){
+    return this->nombre;
+}
+
+void Investigador :: agregarPublicaciones(Publicacion*  p){
+    this->publicaciones.push_back(p);
+    //p->AgregarAutor(this);
 }
 
 set<string> Investigador :: listarPublicaciones(DTFecha desde, string palabra){
@@ -22,4 +30,8 @@ set<string> Investigador :: listarPublicaciones(DTFecha desde, string palabra){
         }
     }
     return aux;
+}
+
+Investigador::~Investigador(){
+    
 }
