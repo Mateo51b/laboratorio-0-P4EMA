@@ -42,5 +42,4 @@ void Publicacion :: AgregarAutor(Investigador* i){
     this->autores.push_back(i);
 }
 
-Publicacion::~Publicacion() {
-}
+Publicacion::~Publicacion() {}

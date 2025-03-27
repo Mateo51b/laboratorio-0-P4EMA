@@ -2,7 +2,6 @@
 #include <string>
 #include <sstream>
 
-
 // Constructor
 DTFecha::DTFecha(int dia, int mes, int año) {
 this->dia = dia;
@@ -25,7 +24,7 @@ int DTFecha::getAnio() {
 
 //Operaciones
 bool DTFecha::operator>=(const DTFecha& fecha){
-    if (this->anio > fecha.dia) {
+    if (this->anio > fecha.anio) {
         return true;
     } else if (this->anio == fecha.anio) {
         if (this->mes > fecha.mes) {
@@ -39,7 +38,7 @@ bool DTFecha::operator>=(const DTFecha& fecha){
     return false;
 }
 bool DTFecha::operator<=(const DTFecha& fecha){
-    if (this->anio < fecha.dia) {
+    if (this->anio < fecha.anio) {
         return true;
     } else if (this->anio == fecha.anio) {
         if (this->mes < fecha.mes) {
