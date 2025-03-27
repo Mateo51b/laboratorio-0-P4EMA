@@ -20,9 +20,9 @@ public:
     string toString();
     string getNombre();
     void agregarPublicaciones(Publicacion* p);
-    set<string> listarPublicaciones(DTFecha desde, string palabras);
+    set<string> listarPublicaciones(DTFecha* desde, string palabras);
 
-    Investigador(string ORCID, string nombre, string institucion, vector<Publicacion*> publicaciones);
+    Investigador(string ORCID, string nombre, string institucion);
     ~Investigador();
 };
 
