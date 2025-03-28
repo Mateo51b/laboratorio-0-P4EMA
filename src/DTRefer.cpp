@@ -56,4 +56,6 @@ ostream& operator<<(ostream &os, const DTRefer &refer)
 }
 
 
-DTRefer::~DTRefer() {}
+DTRefer::~DTRefer() {
+    autores.clear();
+}

@@ -42,4 +42,11 @@ void Publicacion :: AgregarAutor(Investigador* i){
     this->autores.push_back(i);
 }
 
-Publicacion::~Publicacion() {}
+// Destructor
+Publicacion::~Publicacion(){
+    for (vector<Investigador *>::iterator it = autores.begin(); it != autores.end(); it++){
+        (*it)->deleteRelacion(this);
+    }
+    autores.clear();
+    delete this->fecha;
+};

@@ -19,8 +19,9 @@ private:
 public:
     string toString();
     string getNombre();
+    void deleteRelacion(Publicacion* publicacion);
     void agregarPublicaciones(Publicacion* p);
-    set<string> listarPublicaciones(DTFecha* desde, string palabras);
+    set<string> listarPublicaciones(DTFecha desde, string palabras);
 
     Investigador(string ORCID, string nombre, string institucion);
     ~Investigador();
